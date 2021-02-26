@@ -24,7 +24,7 @@ COPY ${DEPENDENCY}/META-INF app/META-INF
 # java classes
 COPY ${DEPENDENCY}/BOOT-INF/classes app
 
-ENTRYPOINT ["java","-cp","app:app/lib/*","UserServiceApplication"]
+ENTRYPOINT ["java","-cp","app:app/lib/*","com.tefnick.userservice.UserServiceApplication"]
 
 # non optimized image using a fat jar
 #FROM openjdk:11
