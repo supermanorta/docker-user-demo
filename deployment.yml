@@ -23,7 +23,7 @@ spec:
   replicas: 5
   selector:
     matchLabels:
-      app: 
+      app: example-user-service
   template:
     metadata:
       labels:
