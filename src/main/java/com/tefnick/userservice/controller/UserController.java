@@ -1,6 +1,7 @@
 package com.tefnick.userservice.controller;
 
 import com.tefnick.userservice.model.User;
+import com.tefnick.userservice.model.UserDTO;
 import com.tefnick.userservice.service.UserRepository;
 import com.tefnick.userservice.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,8 +18,7 @@ public class UserController {
     private UserRepository userRepository;
 
     @GetMapping("/user")
-    public List<User> getAllUsers() {
+    public UserDTO getAllUsers() {
         return userRepository.getAllUsers();
     }
-
 }
