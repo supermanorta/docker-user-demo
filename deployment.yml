@@ -1,11 +1,10 @@
----
 kind: Service
 apiVersion: v1
 metadata:
-  name: exampleservice
+  name: example-user-service
 spec:
   selector:
-    app: myapp
+    app: example-user-service
   ports:
     - protocol: "TCP"
       # Port accessible inside cluster
@@ -19,19 +18,19 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myappdeployment
+  name: user-service-deployment
 spec:
   replicas: 5
   selector:
     matchLabels:
-      app: myapp
+      app: 
   template:
     metadata:
       labels:
-        app: myapp
+        app: example-user-service
     spec:
       containers:
-        - name: myapp
-          image: tefnick/tefnickexample:newuser
+        - name: example-user-service
+          image: tefnick/tefnickexample:latest
           ports:
             - containerPort: 8080
