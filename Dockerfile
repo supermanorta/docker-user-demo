@@ -7,6 +7,10 @@ RUN adduser spring
 # Switch to new user
 USER spring
 
+#  # Switch to user that matches the Spring Profiles
+#  USER spring
+
+
 # set working directory
 WORKDIR /home/spring
 
