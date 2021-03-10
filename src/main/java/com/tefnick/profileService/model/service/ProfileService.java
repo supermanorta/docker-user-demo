@@ -3,7 +3,9 @@ package com.tefnick.profileService.model.service;
 import com.tefnick.config.ProfileConfig;
 import com.tefnick.profileService.model.ProfileDTO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class ProfileService implements ProfileRepo{
     @Autowired
     private ProfileConfig pConfig;
