@@ -21,4 +21,8 @@ public class UserController {
     public UserDTO getAllUsers() {
         return userRepository.getAllUsers();
     }
+    @GetMapping("profiles")
+    public ProfileDTO getProfile(){
+        return profileRepo.getData();
+    }
 }
