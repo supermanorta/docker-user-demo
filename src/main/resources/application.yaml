@@ -1,33 +1,40 @@
+#So in Spring Boot 2.4 we’re planning to make two significant changes to the way the properties and YAML files are loaded:
+#
+#    Documents will be loaded in the order that they’re defined.
+#
+#    Profiles can no longer be activated from profile specific documents.
 spring:
+    application:
+        name: user-service
     config:
+        name: dev-YAML
         activate:
             on-profile: local
-name: devYAML
-environment: local
-enabled: false
-servers: 
-    - www.heb.local.com
-    - www.heb.local.com
+    datasource:
+        name: someName
+        url:
+            - www.heb.local.com
+            - www.heb.local.com
 debug: true
 ---
 spring:
     config:
         activate:
             on-profile: UAT
-name: uat-YAML
-environment: testing
-enabled: false
-servers: 
-    - www.abc.uat.com
-    - www.xyz.uat.com
+        name: uat-YAML
+    datasource:
+        name: someName
+        url:
+            - www.heb.local.com
+            - www.heb.local.com
 ---
 spring:
     config:
         activate:
             on-profile: Prod
-name: prod-YAML
-environment: production
-enabled: false
-servers:
-    - www.abc.prod.com
-    - www.xyz.prod.com
+        name: prod-YAML
+    datasource:
+        name: someName
+        url:
+            - www.heb.local.com
+            - www.heb.local.com

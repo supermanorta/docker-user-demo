@@ -1,11 +1,9 @@
 package com.tefnick.profileService.model;
 
-import com.tefnick.config.ProfileConfig;
+import com.tefnick.configProfiles.ProfileConfig;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import java.util.ArrayList;
-import java.util.List;
 
 @NoArgsConstructor
 @Getter

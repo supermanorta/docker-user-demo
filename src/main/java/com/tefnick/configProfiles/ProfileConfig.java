@@ -1,4 +1,4 @@
-package com.tefnick.config;
+package com.tefnick.configProfiles;
 
 
 import lombok.Getter;
@@ -16,7 +16,7 @@ import java.util.List;
 @ToString
 @NoArgsConstructor
 @Configuration                   // Source of Bean
-@ConfigurationProperties("devYAML") // binds and validates the external configuration to a config class
+@ConfigurationProperties("application.yaml") // binds and validates the external configuration to a config class
 @EnableConfigurationProperties   // enables @ConfigurationProperties annotated bean in the spring app
 public class ProfileConfig {
     private String name;
