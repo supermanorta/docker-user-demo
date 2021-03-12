@@ -1,7 +1,7 @@
-package com.tefnick.profileService.model.controller;
+package com.tefnick.userservice.controller;
 
-import com.tefnick.profileService.model.ProfileDTO;
-import com.tefnick.profileService.model.service.ProfileRepo;
+import com.tefnick.userservice.model.ProfileDTO;
+import com.tefnick.userservice.service.ProfileRepo;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,12 +15,13 @@ public class ProfileController {
     @Autowired
     private ProfileRepo profileRepo;
 
+
     /***
      *
      * @return value of currently selected spring profile
      */
     @GetMapping("/profiles")
-    public ProfileDTO getProfile(){ return profileRepo.getProfile();    }
+    public ProfileRepo getProfile(){ return profileRepo;    }
 
     @GetMapping("/test")
     public String getString(){

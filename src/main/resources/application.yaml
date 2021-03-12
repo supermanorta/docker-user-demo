@@ -3,6 +3,8 @@
 #    Documents will be loaded in the order that they’re defined.
 #
 #    Profiles can no longer be activated from profile specific documents.
+
+
 spring:
     application:
         name: user-service
@@ -11,7 +13,7 @@ spring:
         activate:
             on-profile: local
     datasource:
-        name: someName
+        name: localH2
         url:
             - www.heb.local.com
             - www.heb.local.com
@@ -23,10 +25,10 @@ spring:
             on-profile: UAT
         name: uat-YAML
     datasource:
-        name: someName
+        name: uatDB
         url:
-            - www.heb.local.com
-            - www.heb.local.com
+            - www.heb.uat.com
+            - www.heb.uat.com
 ---
 spring:
     config:
@@ -34,7 +36,7 @@ spring:
             on-profile: Prod
         name: prod-YAML
     datasource:
-        name: someName
+        name: prodDB
         url:
-            - www.heb.local.com
-            - www.heb.local.com
+            - www.heb.prod.com
+            - www.heb.prod.com

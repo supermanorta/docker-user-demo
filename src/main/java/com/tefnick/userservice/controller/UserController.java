@@ -1,6 +1,5 @@
 package com.tefnick.userservice.controller;
 
-
 import com.tefnick.userservice.model.UserDTO;
 import com.tefnick.userservice.service.UserRepository;
 import lombok.Getter;
@@ -19,7 +18,6 @@ public class UserController {
     private UserRepository userRepository;
 
 
-
     @GetMapping("/user")
     public UserDTO getAllUsers() {
         return userRepository.getAllUsers();
@@ -29,4 +27,6 @@ public class UserController {
     public UserDTO getAllUser() {
         return userRepository.getAllUsers();
     }
+
+
 }

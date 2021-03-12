@@ -1,14 +1,14 @@
-package com.tefnick.profileService.model;
+package com.tefnick.userservice.model;
 
-import com.tefnick.configProfiles.ProfileConfig;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
 public class ProfileDTO {
-    public ProfileConfig pConfig;
-
+    public DataSrc pConfig;
 }
