@@ -40,4 +40,4 @@ WORKDIR /home/demo
 
 COPY build/libs/*.jar app.jar
 RUN chmod 777 /home/demo
-ENTRYPOINT ["java","-jar","-Dspring.profiles.active=local","app.jar"]
+ENTRYPOINT ["java","-Dspring.profiles.active=local","-jar","app.jar"]
