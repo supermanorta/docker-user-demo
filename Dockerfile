@@ -10,7 +10,6 @@ USER spring
 #  # Switch to user that matches the Spring Profiles
 #  USER spring
 
-
 # set working directory
 WORKDIR /home/spring
 
@@ -28,8 +27,8 @@ COPY ${DEPENDENCY}/META-INF app/META-INF
 # java classes
 COPY ${DEPENDENCY}/BOOT-INF/classes app
 
-ENTRYPOINT ["java","-cp","app:app/lib/*","com.tefnick.userservice.UserServiceApplication"]
-
+#ENTRYPOINT ["java","-cp","app:app/lib/*","com.tefnick.userservice.UserServiceApplication"]
+#ENTRYPOINT ["java","--class-path","app:app/lib/*","-Dspring.profiles.active=local","com.tefnick.userservice.UserServiceApplication"]
 # non optimized image using a fat jar
 #FROM openjdk:11
 #
@@ -41,4 +40,4 @@ ENTRYPOINT ["java","-cp","app:app/lib/*","com.tefnick.userservice.UserServiceApp
 #
 #COPY build/libs/*.jar app.jar
 #RUN chmod 777 /home/demo
-#ENTRYPOINT ["java","-jar","app.jar"]
+ENTRYPOINT ["java","-Dspring.profiles.active=local","-jar","app.jar"]

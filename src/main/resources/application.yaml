@@ -4,7 +4,7 @@
 #
 #    Profiles can no longer be activated from profile specific documents.
 
-
+# Defualt Settings
 spring:
     application:
         name: user-service
@@ -18,7 +18,7 @@ spring:
             - www.heb.local.com
             - www.heb.local.com
 debug: true
----
+--- #Must pass in Var to overwrite defult
 spring:
     config:
         activate:
@@ -29,7 +29,8 @@ spring:
         url:
             - www.heb.uat.com
             - www.heb.uat.com
----
+debug: true
+--- # Will overwrite previous two set ups when correct var is passed in
 spring:
     config:
         activate:
