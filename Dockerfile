@@ -36,8 +36,8 @@ RUN addgroup -S spring && adduser -S spring -G spring
 USER spring:spring
 
 # set working directory
-WORKDIR /home/demo
+WORKDIR /home/spring
 
 COPY build/libs/*.jar app.jar
-RUN chmod 777 /home/demo
+RUN chmod 777 /home/spring
 ENTRYPOINT ["java","-Dspring.profiles.active=local","-jar","app.jar"]
