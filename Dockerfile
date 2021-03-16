@@ -37,7 +37,7 @@ USER spring:spring
 #
 ## set working directory
 WORKDIR /home/spring
-
-COPY build/libs/*.jar app.jar
 RUN chmod 777 /home/spring
+COPY build/libs/*.jar app.jar
+
 ENTRYPOINT ["java","-Dspring.profiles.active=local","-jar","app.jar"]
