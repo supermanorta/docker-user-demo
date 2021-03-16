@@ -32,7 +32,7 @@
 # non optimized image using a fat jar
 FROM openjdk:11
 
-#RUN addgroup -S spring && adduser -S spring -G spring
+RUN addgroup -S spring && adduser -S spring -G spring
 USER spring:spring
 #
 ## set working directory
