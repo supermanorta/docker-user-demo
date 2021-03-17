@@ -32,8 +32,8 @@
 # non optimized image using a fat jar
 FROM openjdk:11
 
-RUN addgroup -S spring && adduser -S spring -G spring
-USER spring:spring
+RUN  adduser spring
+USER spring
 #
 ## set working directory
 WORKDIR /home/spring
