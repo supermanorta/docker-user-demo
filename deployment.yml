@@ -1,5 +1,3 @@
-#testing a push to make sure creds are still intact
-
 kind: Service
 apiVersion: v1
 metadata:
